@@ -18,8 +18,12 @@ const screenOptionStyle = {
 
 const MainStackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Home" component={UserHomeScreen}  />
+    <Stack.Navigator screenOptions={{
+      headerShown: false
+      }}>
+      <Stack.Screen name="Home" component={UserHomeScreen} screenOptions={{
+        headerShown: false
+        }} />
       <Stack.Screen name="Details" component={DetailsScreen} />
     </Stack.Navigator>
   );
@@ -28,7 +32,9 @@ const MainStackNavigator = () => {
 const ContactStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} screenOptions={{
+        headerShown: false
+        }}/>
     </Stack.Navigator>
   );
 };

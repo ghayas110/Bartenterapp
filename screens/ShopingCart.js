@@ -1,24 +1,23 @@
 import { Button, StyleSheet, Text, View,SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
-import { Ionicons } from '@expo/vector-icons';
-const UserHomeScreen = ({navigation}) => {
+import { Ionicons,Entypo } from '@expo/vector-icons';
+
+const ShopingCart = ({navigation}) => {
   return (
     <SafeAreaView>
-    <Header title="Chat" headerShown={false}/>
+    <Header title="ShopingCart" headerShown={false}/>
   
     <View style={styles.container}>
-    <Ionicons name="chatbox" size={80} color="#ccc" />
-    <Text style={styles.text}>No messages</Text>
-    <TouchableOpacity style={styles.button}>
-        <Ionicons name="add" size={30} color="#fff" />
-      </TouchableOpacity>
+    <Entypo name="shopping-bag" size={80} color="#ccc" />
+    <Text style={styles.text}>No Items in cart</Text>
+
   </View>
     </SafeAreaView>
   )
 }
 
-export default UserHomeScreen
+export default ShopingCart
 
 const styles = StyleSheet.create({
   container: {
